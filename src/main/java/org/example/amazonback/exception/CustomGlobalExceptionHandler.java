@@ -9,6 +9,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -49,10 +50,10 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
         return getObjectResponseEntity(ex.getMessage(), ex, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(RegistrationException.class)
-    protected ResponseEntity<Object> handleMethodRegistrationException(
-            RegistrationException ex) {
-        return getObjectResponseEntity(ex.getMessage(), ex, HttpStatus.CONFLICT);
+    @ExceptionHandler(Exception.class)
+    protected ResponseEntity<Object> handleException(
+            Exception ex) {
+        return getObjectResponseEntity(ex.getMessage(), ex, HttpStatus.BAD_REQUEST);
     }
 
     private ResponseEntity<Object> getObjectResponseEntity(
