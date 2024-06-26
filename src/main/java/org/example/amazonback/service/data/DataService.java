@@ -1,4 +1,4 @@
-package org.example.amazonback.service.book;
+package org.example.amazonback.service.data;
 
 import java.util.List;
 import org.example.amazonback.dto.user.LimitDto;

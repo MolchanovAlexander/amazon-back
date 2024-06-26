@@ -4,7 +4,7 @@ import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.example.amazonback.dto.user.LimitDto;
-import org.example.amazonback.service.book.DataService;
+import org.example.amazonback.service.data.DataService;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

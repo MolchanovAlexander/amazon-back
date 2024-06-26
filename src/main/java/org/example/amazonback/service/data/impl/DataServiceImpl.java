@@ -1,11 +1,11 @@
-package org.example.amazonback.service.book.impl;
+package org.example.amazonback.service.data.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import lombok.RequiredArgsConstructor;
 import org.example.amazonback.dto.user.LimitDto;
-import org.example.amazonback.service.book.DataService;
+import org.example.amazonback.service.data.DataService;
 import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
